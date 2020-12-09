@@ -6,7 +6,7 @@
 
 #variables
 $regionalsettingsURL = "https://raw.githubusercontent.com/phil1908/WVD-helpers/master/DERegion.xml"
-$RegionalSettings = ""C:\Packages\DERegion.xml""
+$RegionalSettings = "C:\Packages\DERegion.xml"
 
 
 #downdload regional settings file
