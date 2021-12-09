@@ -67,7 +67,7 @@ catch {
 
 #region VSCode
 try {
-    Start-Process -filepath 'C:\temp\VSCodeSetup-x64-1.63.0.exe' -Wait -ErrorAction Stop -ArgumentList '/VERYSILENT'
+    Start-Process -filepath 'C:\temp\VSCodeSetup-x64-1.63.0.exe' -Wait -ErrorAction Stop -ArgumentList '/VERYSILENT', '/mergetasks=!runcode'
     if (Test-Path "C:\Program Files\Microsoft VS Code\Code.exe") {
         Write-Log "VSCode has been installed"
     }
