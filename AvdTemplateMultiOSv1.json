@@ -89,12 +89,29 @@
                         "restartTimeout": "5m"
                     },
                     {
-                        "type": "PowerShell",
-                        "name": "Install some Apps",
-                        "runElevated": true,
-                        "runAsSystem": true,
-                        "scriptUri": "https://raw.githubusercontent.com/phil1908/myhelpingfiles/main/Install-Applications.ps1"
-                    },    
+                         "type": "PowerShell",
+                         "name": "GetAzCopy",
+                         "inline": [
+              "New-Item -Type Directory -Path 'c:\\' -Name temp",
+              "invoke-webrequest -uri 'https://aka.ms/downloadazcopy-v10-windows' -OutFile 'c:\\temp\\azcopy.zip'",
+              "Expand-Archive 'c:\\temp\\azcopy.zip' 'c:\\temp'",
+              "copy-item 'C:\\temp\\azcopy_windows_amd64_*\\azcopy.exe\\' -Destination 'c:\\temp'"
+            ]
+          },
+          {
+            "type": "PowerShell",
+            "name": "GetArchive",
+            "inline": [
+              "c:\\temp\\azcopy.exe copy 'https://tpaibsoftware.blob.core.windows.net/softwarefiles/AIB-Software.zip?sp=r&st=2021-12-09T13:09:57Z&se=2022-01-09T21:09:57Z&spr=https&sv=2020-08-04&sr=b&sig=sa9KR7mmQcVLhEoUORcVXlDYaxWOyivkVc1PrqzYseQ%3D' c:\\temp\\software.zip",
+              "Expand-Archive 'c:\\temp\\software.zip' c:\\temp"
+            ]
+          },
+          {
+            "type": "PowerShell",
+            "runElevated": true,
+            "name": "RunPoShInstall",
+            "scriptUri": "https://raw.githubusercontent.com/phil1908/myhelpingfiles/main/Install-Applications.ps1"
+          },   
                     {
                         "type": "WindowsUpdate",
                         "searchCriteria": "IsInstalled=0",
