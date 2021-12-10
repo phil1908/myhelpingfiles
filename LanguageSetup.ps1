@@ -5,7 +5,7 @@
 ######################################
 
 #variables
-$regionalsettingsURL = "https://raw.githubusercontent.com/phil1908/WVD-helpers/master/DERegion.xml"
+$regionalsettingsURL = "https://raw.githubusercontent.com/phil1908/myhelpingfiles/main/DERegion.xml"
 $RegionalSettings = "C:\Packages\DERegion.xml"
 
 
