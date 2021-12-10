@@ -115,7 +115,7 @@
           "distribute": [
             {
               "type": "SharedImage",
-              "imageId": "/subscriptions/<subscriptionID>/resourceGroups/<rgName>/providers/Microsoft.Compute/galleries/<sharedImageGalName>/images/<imageDefName>",
+              "galleryimageId": "/subscriptions/<subscriptionID>/resourceGroups/<rgName>/providers/Microsoft.Compute/galleries/<sharedImageGalName>/images/<imageDefName>",
               "location": "<region>",
               "runOutputName": "<runOutputName>",
               "artifactTags": {
