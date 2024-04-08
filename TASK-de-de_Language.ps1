@@ -1,4 +1,4 @@
-$source = "https://intuneblobthephilip.blob.core.windows.net/openuri/TASK-de-de_Language.ps1"
+$source = "https://intuneblobthephilip.blob.core.windows.net/openuri/de-de_Language.ps1"
 $destination = "c:\windows\temp\de-de_Language.ps1"
 
 if (!(Test-Path -Path $destination)) {
