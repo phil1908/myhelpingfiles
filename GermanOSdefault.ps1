@@ -1,6 +1,6 @@
 ######################################
 
-$source = "https://cestgaleriespro01.blob.core.windows.net/container-avd-01/DE-region.xml"
+$source = "https://avdncbest.blob.core.windows.net/installfiles/de-de-viaXML.ps1"
 $destination = "c:\windows\temp\DE-region.xml"
 
 if (!(Test-Path -Path $destination)) {
